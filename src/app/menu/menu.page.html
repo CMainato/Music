@@ -1,7 +1,7 @@
 <ion-split-pane >
   <ion-menu contentId="content" side="end">
     <ion-header mode="md">
-      <ion-toolbar color="success">
+      <ion-toolbar color="danger">
         <ion-title>Menu</ion-title>
         <ion-buttons slot="end">
           <ion-button icon-only (click)="closeMenu()">
@@ -11,14 +11,14 @@
       </ion-toolbar>
     </ion-header>
 
-    <ion-content padding color="primary">
-      <ion-list color="primary" lines="none">
+    <ion-content padding color="dark">
+      <ion-list color="dark" lines="none">
         <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
           <ion-item
             [routerLink]="p.url"
             routerDirection="root"
             [class.active-item]="selectedPath.startsWith(p.url)"
-            color="primary"
+            color="dark"
             lines="none"
           >
             <ion-label>
@@ -28,8 +28,8 @@
           </ion-item>
         </ion-menu-toggle>
 
-        <ion-item tappable color="success" lines="none" (click)="logout()">
-          <ion-icon name="log-out" color="primary" slot="start"></ion-icon>
+        <ion-item tappable color="dark" lines="none" (click)="logout()">
+          <ion-icon name="log-out" color="dark" slot="start"></ion-icon>
           Salir
         </ion-item>
       </ion-list>
